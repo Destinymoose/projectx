@@ -10,6 +10,7 @@ public class ThroneInheritance {
 	    private Set<String> deathNames;
 	    inputConstraints contraints = new  inputConstraints();
 	    private String kingName;
+		int counter=0;
 		 
 		   public ThroneInheritance( String kingName) {
 				if (contraints.islength(kingName)) {
@@ -64,7 +65,12 @@ public class ThroneInheritance {
 	    public List<String> getInheritanceOrder() {
 	        List<String>  curOrder = new ArrayList();
 	         Successor(kingName, curOrder);
+		    if(counter<=10){
 		    System.out.println(curOrder.toString());
+			    counter++
+		    }else{
+			    System.out.println("can not exceed 10 calls");
+		    }
 	          return  curOrder;
 	    }
 		   
