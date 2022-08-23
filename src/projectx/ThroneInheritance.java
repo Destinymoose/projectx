@@ -38,7 +38,6 @@ public class ThroneInheritance {
 			    			
 			    			}
 			    				tree.get(parentName).add(childName);
-			    				//System.out.println(getInheritanceOrder().toString());
 	                } else {
 	                    System.out.println("All names should be in lower case");
 	                    System. exit(1);
@@ -59,12 +58,13 @@ public class ThroneInheritance {
 		    	public void death(String name) {
 			   
 		    		deathNames.add(name);
-	                 System.out.println(getInheritanceOrder().toString());	        
+		        
 	    }
 	    
 	    public List<String> getInheritanceOrder() {
 	        List<String>  curOrder = new ArrayList();
 	         Successor(kingName, curOrder);
+		    System.out.println(curOrder.toString());
 	          return  curOrder;
 	    }
 		   
